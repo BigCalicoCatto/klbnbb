@@ -22,11 +22,7 @@ export const config = defaultWagmiConfig({
   }
 })
 
-createWeb3Modal({
+export const modal = createWeb3Modal({
   wagmiConfig: config,
   projectId,
 })
-
-export const modal = {
-  open: () => document.querySelector('w3m-button')?.click()
-}
